@@ -55,7 +55,8 @@ const Navbar = () => {
                             <button
                                 key={link.id}
                                 onClick={() => handleNavClick(link.id)}
-                                className={`text-base font-medium transition-all duration-300 ${activeSection === link.id
+                                className={`text-base font-medium transition-all duration-300 
+                                ${activeSection === link.id
                                 ? 'text-white'
                                 : 'text-white/70 hover:text-white'
                                 }`}>
@@ -68,7 +69,8 @@ const Navbar = () => {
                     <div className="hidden md:flex items-center gap-2">
                         <button
                             onClick={() => handleNavClick('contact')}
-                            className='px-7 py-3.5 bg-white text-black font-medium text-base rounded-[17px] border border-white hover:bg-white/90 transition-all duration-300'>
+                            className='px-7 py-3.5 bg-white text-black font-medium text-base rounded-[17px] border
+                            border-white hover:bg-white/90 transition-all duration-300'>
                             Hire Me
                         </button>
                     </div>
@@ -90,21 +92,23 @@ const Navbar = () => {
                 className={`md:hidden transition-all duration-300 overflow-hidden 
                 ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}>
-                <div className="">
+                <div className="bg-black/95 backdrop-blur-lg border-t border-white/10 p-x-5 py-6 space-y-3">
                     {NAV_LINK.map((link) => (
                         <button
                             key={link.id}
                             onClick={() => handleNavClick(link.id)}
-                            className={`block w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 
-                            ${activeSection === link.id ? 'text-white bg-white/10' : 'text-white/70 hover:text-white hover:bg-white/5'
+                            className={`block w-full text-left px-4 py-3 rounded-lg font-medium 
+                            transition-all duration-300 ${activeSection === link.id ? 'text-white bg-white/10' 
+                                : 'text-white/70 hover:text-white hover:bg-white/5'
                             }`}>
                                 {link.label}
                         </button>
                     ))}
                     <button
                         onClick={() => handleNavClick('contact')}
-                        className="w-full px-7 py-3.5 bg-white text-[#212121] font-medium text-base rounded-[17px] border border-white hover:bg-white/90 transition-all duration-300 mt-2">
-
+                        className="w-full px-7 py-3.5 bg-white text-[#212121] font-medium text-base rounded-[17px]
+                        border border-white hover:bg-white/90 transition-all duration-300 mt-2">
+                        Hire Me
                     </button>
                 </div>
             </div>
