@@ -5,7 +5,7 @@ import {scrollToSection, useScrollSpy} from "../../hooks/useScrollSpy.js";
 
 const Navbar = () => {
     //States
-    const [isMenuOpened,setIsMenuOpened] = useState(false);
+    const [isMenuOpen,setIsMenuOpen] = useState(false);
     const [isScrolled,setIsScrolled] = useState(false);
 
     const activeSection = useScrollSpy(NAV_LINK.map(link => link.id)); //Custom hook
@@ -88,10 +88,10 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div
                 className={`md:hidden transition-all duration-300 overflow-hidden 
-                ${isMenuOpened ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}>
                 <div className="">
-                    {NAV_LINK.map((link) => {
+                    {NAV_LINK.map((link) => (
                         <button
                             key={link.id}
                             onClick={() => handleNavClick(link.id)}
@@ -100,7 +100,7 @@ const Navbar = () => {
                             }`}>
                                 {link.label}
                         </button>
-                    })}
+                    ))}
                     <button
                         onClick={() => handleNavClick('contact')}
                         className="w-full px-7 py-3.5 bg-white text-[#212121] font-medium text-base rounded-[17px] border border-white hover:bg-white/90 transition-all duration-300 mt-2">
