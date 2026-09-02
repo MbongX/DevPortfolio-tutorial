@@ -9,7 +9,7 @@ const FadeIn = ({children, delay=0, duration=500,threshold=0.1}) => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 // Trigger fade-in animation when the element is in view
-                if(entry.isIntersecting && isVisible) {
+                if(entry.isIntersecting && !isVisible) {
                     setIsVisible(true);
                 }
             },
