@@ -3,10 +3,14 @@ export const PERSONAL_INFO = {
     title: 'Software Developer',
     email: 'mbongenimahlangu203@gmail.com',
     location: 'Johannesburg, ZA',
-    tagline: '',
+    tagline: 'AI/ML Enthusiast | Full Stack Developer | Automation Developer',
     resume: '/developer-resume-placeholder.txt',
     bio: [
-        ""
+        "I specialize in building end-to-end web applications with .NET / C# on the backend and **React** the frontend. " +
+        "My journey in software engineering centers around solving high-stakes domain challenges. I believe great engineering " +
+        "is about more than just writing code: it is about writing predictable, well-tested systems, choosing the right " +
+        "abstractions, and delivering an experience that feels seamless to the end user. " +
+        "When I’m not writing C# or React, I’m exploring system design, experimenting with new web technologies, or refining developer tooling."
     ]
 };
 
