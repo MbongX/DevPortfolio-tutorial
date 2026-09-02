@@ -81,6 +81,10 @@
         animation: fadeIn 0.5s ease-out;
     }
 
+    .animate-fadeIn {
+        animation: fadeIn 0.5s ease-out;
+    }
+
     .animation-pulse {
         animation: pulse 3s ease-in-out infinite;
     }
