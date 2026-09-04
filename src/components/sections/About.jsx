@@ -125,11 +125,11 @@ const About = () => {
                         <div className="relative group">
                             <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-primary/5 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
                             <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 h-full">
-                                <div className="">
-                                    <Sparkles className=""/>
+                                <div className="p-3 bg-primary/10 rounded-xl w-fit mb-4">
+                                    <Sparkles className="w-5 h-5 text-primary"/>
                                 </div>
-                                <h3 className="">Clean Code</h3>
-                                <p className="">Writing maintainable, well-documented code that scales.</p>
+                                <h3 className="text-base font-semibold text-white mb-2">Clean Code</h3>
+                                <p className="text-sm text-white/70 leading-relaxed">Writing maintainable, well-documented code that scales.</p>
                             </div>
                         </div>
                         
