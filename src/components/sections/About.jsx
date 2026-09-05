@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import {Download, Code2, Sparkles} from 'lucide-react';
-import {SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiMongodb} from "react-icons/si";
-import {PERSONAL_INFO,ABOUT_STATS} from "../../utils/constants";
+import React from 'react';
+import {Code2, Download, Sparkles} from 'lucide-react';
+import {SiMongodb, SiNextdotjs, SiNodedotjs, SiReact, SiTailwindcss, SiTypescript} from "react-icons/si";
+import {ABOUT_STATS, PERSONAL_INFO} from "../../utils/constants";
 import FadeIn from "../animations/FadeIn";
 import RadialGradientBackground from "../backgrounds/RadialGradientBackground";
 
@@ -41,7 +41,7 @@ const About = () => {
         }
     ];
 
-    return (<section id='about' className="relative py-20 bg-black overflow-hidden">
+    return <section id='about' className="relative py-20 bg-black overflow-hidden">
             <RadialGradientBackground varient="about"/>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,74 +102,82 @@ const About = () => {
                             </FadeIn>
                         </div>
                     </div>
+                    {/* Right Column - Info Grid */}
+                    <FadeIn delay={200}>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="col-span-2 relative group">
+                                <div
+                                    className="absolute inset-0 bg-linear-to-br from-primary/10 to-primary/5 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                                <div
+                                    className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primari transition-all duration-300">
+                                    <div className="flex item-start gap-4">
+                                        <div className="p-3 bg-primary/10 rounded-xl">
+                                            <Code2 className="w-6 h-6 text-primary"/>
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
+                                            <p className="text-sm text-white/70 leadeing-relaxed">Specialized in
+                                                building scalable web applications with modern technologies and best
+                                                practices.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="relative group">
+                                <div
+                                    className="absolute inset-0 bg-linear-to-br from-primary/10 to-primary/5 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                                <div
+                                    className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 h-full">
+                                    <div className="p-3 bg-primary/10 rounded-xl w-fit mb-4">
+                                        <Sparkles className="w-5 h-5 text-primary"/>
+                                    </div>
+                                    <h3 className="text-base font-semibold text-white mb-2">Clean Code</h3>
+                                    <p className="text-sm text-white/70 leading-relaxed">Writing maintainable,
+                                        well-documented code that scales.</p>
+                                </div>
+                            </div>
+
+                            <div className="relative group">
+                                <div
+                                    className="absolute inset-0 bg-linear-to-br from-primary/10 to-primary/5 rounded-2xl blur-xl  opacity-50 group-hover:opacity -75 transition-opacity duration-300"></div>
+                                <div
+                                    className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 h-full">
+                                    <div className="p-3 bg-primary/10 rounded-xl w-fit mb-4">
+                                        <Download className="w-5 h-5 text-primary"/>
+                                    </div>
+                                    <h3 className="text-base font-semibold text-white mb-2">Performance</h3>
+                                    <p className="text-sm text-white/70 leading-relaxed">Optimizing for speed and
+                                        efficiency in every project</p>
+                                </div>
+                            </div>
+
+                            <div className="col-span-2 relative group">
+                                <div
+                                    className="absolute inset-0 bg-linear-to-br from-primary/10 to primary/5 rounded-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                                <div
+                                    className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300">
+                                    <div className="grid grid-cols-3 gap-6 text-center">
+                                        <div>
+                                            <div className="text-2xl font-bold text-primary mb-1">100%</div>
+                                            <div className="text-xs text-white/60">Client Satisfaction</div>
+                                        </div>
+                                        <div>
+                                            <div className="text-2xl font-bold text-primary mb-1">24/7</div>
+                                            <div className="text-xs text-white/60 ">Support Available</div>
+                                        </div>
+                                        <div>
+                                            <div className="text-2xl font-bold text-primary mb-1">Fast</div>
+                                            <div className="text-xs text-white/60">Delivery Time</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </FadeIn>
                 </div>
-
-                {/* Right Column - Info Grid */}
-                <FadeIn delay={200}>
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="col-span-2 relative group">
-                            <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-primary/5 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-                            <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primari transition-all duration-300">
-                                <div className="flex item-start gap-4">
-                                    <div className="p-3 bg-primary/10 rounded-xl">
-                                        <Code2 className="w-6 h-6 text-primary"/>
-                                    </div>
-                                    <div className="flex-1">
-                                        <h3 className="text-lg font-semibold text-white mb-2">Experience</h3>
-                                        <p className="text-sm text-white/70 leadeing-relaxed">Specialized in building scalable web applications with modern technologies and best practices.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="relative group">
-                            <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-primary/5 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-                            <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 h-full">
-                                <div className="p-3 bg-primary/10 rounded-xl w-fit mb-4">
-                                    <Sparkles className="w-5 h-5 text-primary"/>
-                                </div>
-                                <h3 className="text-base font-semibold text-white mb-2">Clean Code</h3>
-                                <p className="text-sm text-white/70 leading-relaxed">Writing maintainable, well-documented code that scales.</p>
-                            </div>
-                        </div>
-                        
-                        <div className="">
-                            <div className=""></div>
-                            <div className="">
-                                <div className="">
-                                    <Download className=""/>
-                                </div>
-                                <h3 className="">Performance</h3>
-                                <p className="">Optimizing for speed and efficiency in every project</p>
-                            </div>
-                        </div>
-
-                        <div className="">
-                            <div className=""></div>
-                            <div className="">
-                                <div className="">
-                                    <div>
-                                        <div className="">100%</div>
-                                        <div className="">Client Satisfaction</div>
-                                    </div>
-                                    <div>
-                                        <div className="">24/7</div>
-                                        <div className="">Support Available</div>
-                                    </div>
-                                    <div>
-                                        <div className="">Fast</div>
-                                        <div className="">Delivery Time</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </FadeIn>
-
-
-
             </div>
-    </section>)
+    </section>
 };
 
 export default About;
